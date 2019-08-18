@@ -5,16 +5,16 @@
 .dropdown-menu {
     display: block;
     visibility: hidden;
-    -webkit-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
+    -webkit-animation: fadeOut 0.4s ease-in-out;
+    animation: fadeOut 0.4s ease-in-out;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
     right: 0;
 }
 .dropdown:hover > .dropdown-menu {
     visibility: visible;
-    -webkit-animation: fadeIn 0.4s ease-in-out; /* Chrome, Safari, Opera */
+    -webkit-animation: fadeIn 0.4s ease-in-out;
     animation: fadeIn 0.4s ease-in-out;
-    -webkit-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
 }
 
 .dropdown-toggle::after {
