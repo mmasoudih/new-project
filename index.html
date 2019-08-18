@@ -31,7 +31,7 @@
 
                    <li class="nav-item dropdown">
                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false">منو تست</a>
-                       <div class="dropdown-menu animated" aria-labelledby="dropdown01">
+                       <div class="dropdown-menu" aria-labelledby="dropdown01">
                            <a class="dropdown-item" href="#">زیر منو یک</a>
                            <a class="dropdown-item" href="#">زیر منو دو</a>
                            <a class="dropdown-item" href="#">زیر منو سه</a>
@@ -48,6 +48,21 @@
 <script src="assets/js/jquery-3.4.1.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
+<script>
+    function animateCSS(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
 
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
+    animateCSS('.dropdown-menu', 'bounce');
+</script>
 </body>
 </html>

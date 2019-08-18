@@ -2,17 +2,21 @@
     direction: rtl !important;
     text-align: right !important;
 }
-
-.dropdown:hover > .dropdown-menu {
-    visibility: visible;
-    -webkit-animation:fadeIn 0.4s ease-in-out; /* Chrome, Safari, Opera */
-    animation:fadeIn 0.4s ease-in-out;
-}
-.dropdown-menu{
+.dropdown-menu {
     display: block;
     visibility: hidden;
-    right:0 ;
+    -webkit-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    right: 0;
 }
-.dropdown-toggle::after{
-    margin-right: .255em !important;
+.dropdown:hover > .dropdown-menu {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.4s ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeIn 0.4s ease-in-out;
+    -webkit-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.dropdown-toggle::after {
+    margin-right: 0.255em !important;
 }
