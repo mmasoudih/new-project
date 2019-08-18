@@ -1,0 +1,16 @@
+*{
+    direction: rtl !important;
+    text-align: right !important;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu{
+    -webkit-animation:fadeIn 0.3s ease-in-out; /* Chrome, Safari, Opera */
+    animation:fadeIn 0.3s ease-in-out;
+    transition: all 0.3s;
+    right:0 ;
+}
+.dropdown-toggle::after{
+    margin-right: .255em !important;
+}
